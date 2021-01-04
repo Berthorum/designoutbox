@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Habilita a responsividade e uso de @media-->
+  <title>Design Outbox</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/187f69a153.js" crossorigin="anonymous"></script> <!-- Puxa via rede os ícones das Redes Sociais-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> <!--Puxa via rede a biblioteca SweetAlert para alguns pop-ups dinâmicos na aplicação-->
+  <script src="scripts/produtos.js"></script>
+</head>
+
+<body onload="carregar(), carregarTituloProdutos()">
+  <header id = "landing" autofocus>
+    <nav class="menu">
+      <ul class="container">
+        <li><a href="#landing"><img src="./img/floral.svg" alt="Home" width="30px" height="30px"></a></li>
+        <li class="centraliza"><a href="#sobre">Sobre</a></li>
+        <li class="centraliza" onclick="produtosLanc()"><a href="#produtos">Lançamentos</a></li>
+        <li class="centraliza" onclick="produtosAll()"><a href="#produtos">Produtos</a></li>
+        <li class="centraliza"><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="titulo">
+      <figure>
+        <img src="./img/floral.svg" alt="Logo E-Commerce">
+      </figure>
+      <h1 class="name-marca">Design Outbox</h1>
+    </div>
+  </header>
+
+  <section class="sobre container" id="sobre" onmouseover="mouseOverSobre(this)" onmouseout="mouseOutSobre(this)">
+    <h2>Sobre</h2>
+
+    <figure class="logo">
+      <img src="./img/floral.svg" alt="Logo E-Commerce">
+    </figure>
+
+    <p>Fundada em 2015 por Ravier de Oliveira, Designer, Programador e Artista Digital Generalista, a Design Outbox tem por objetivo trazer peças de vestuário, acessórios e calçados de diversas marcas renomadas, porém com uma idéia fora da caixa: Trazer preços bem mais abaixo em relação a marcas e empresas já consolidadas no mercado.
+    </p>
+
+    <p>Essa ideia veio da necessidade de democratizar o acesso a bons produtos do mundo do design de moda, acessórios e afins.
+    </p>
+      
+    <p>   
+     Temos lojas espalhadas por todo o Brasil e em alguns países da Europa como Espanha, França e Reino Unido. No Brasil, temos sede em Salvador-BA porém, também há uma loja em cada região do país.
+    </p>
+
+    <p> 
+      Esperamos que gostem dos nossos produtos e <strong>Preços!</strong> &#128058
+    </p>
+  </section>
+
+  <section class=" produtos container" id="produtos">
+    <h2 id="prod"></h2>
+   
+    <div class="grid">
+      <article>
+        <div class="card">
+          <div class="img-produtos">
+            <figure>
+              <img src="./img/nikeAir.jpg" alt="Nike Air Jordan">
+            </figure>
+          </div>
+          <div class="text-produtos">
+            <h3>Nike Air Jordan</h3>
+          </div>
+
+          <div class="preco-produtos">
+            <button type="button" class="button-buy" onclick="comprar()"><h3>R$ 499,<small>99</small></h3></button>
+          </div>
+        </div>
+      </article>
+          
+      <article>
+        <div class="card">
+          <div class="img-produtos">
+            <figure>
+              <img src="./img/dressRed.jpg" alt="Vestido Agilità Vinho">
+            </figure>
+          </div>
+          <div class="text-produtos">
+            <h3>Vestido Agilità Vinho</h3>
+          </div>
+
+          <div class="preco-produtos">
+            <button type="button" class="button-buy" onclick="comprar()"><h3>R$ 799,<small>99</small></h3></button>
+          </div>
+        </div>
+      </article>
+
+      <article>
+        <div class="card">
+          <div class="img-produtos">
+            <figure>
+              <img src="./img/colar.jpg" alt="Colar Gucci dourado">
+            </figure>
+          </div>
+          <div class="text-produtos">
+            <h3>Colar Gucci Dourado</h3>
+          </div>
+          <div class="preco-produtos">
+            <button type="button" class="button-buy" onclick="comprar()"><h3>R$ 999,<small>99</small></h3></button>
+          </div>
+        </div>
+      </article>
+
+      <article>
+        <div class="card">
+          <div class="img-produtos">
+            <figure>
+              <img src="./img/camisetaRusty.jpg" alt="Camiseta Rusty">
+            </figure>
+          </div>
+          <div class="text-produtos">
+            <h3>Camiseta Rusty</h3>
+          </div>
+          <div class="preco-produtos">
+            <button type="button" class="button-buy" onclick="comprar()"><h3>R$ 119,<small>99</small></h3></button>
+          </div>
+        </div>
+      </article>
+
+      <article>
+        <div class="card">
+          <div class="img-produtos">
+            <figure>
+              <img src="./img/calcaJeans.jpg" alt="Calça Jeans Men">
+            </figure>
+          </div>
+          <div class="text-produtos">
+            <h3>Calça Jeans Men</h3>
+          </div>
+          <div class="preco-produtos">
+            <button type="button" class="button-buy" onclick="comprar()"><h3>R$ 199,<small>99</small></h3></button>
+          </div>
+        </div>
+      </article>
+
+      <article>
+        <div class="card">
+          <div class="img-produtos">
+            <figure>
+              <img src="./img/brincosOuro.jpg" alt="Brincos de Ouro 18K Argola Dupla">
+            </figure>
+          </div>
+          <div class="text-produtos">
+            <h3>Brincos de Ouro 18K Argola Dupla</h3>
+          </div>
+          <div class="preco-produtos">
+            <button type="button" class="button-buy" onclick="comprar()"><h3>R$ 699,<small>99</small></h3></button>
+          </div>
+        </div>
+      </article>
+
+      <article>
+        <div class="card">
+          <div class="img-produtos">
+            <figure>
+              <img src="./img/aliancaAmarela.jpg" alt="Aliança Amarela 18K">
+            </figure>
+          </div>
+          <div class="text-produtos">
+            <h3>Aliança Amarela 18K</h3>
+          </div>
+          <div class="preco-produtos">
+            <button type="button" class="button-buy" onclick="comprar()"><h3>R$ 1499,<small>99</small></h3></button>
+          </div>
+        </div>
+      </article>
+
+      <article>
+        <div class="card">
+          <div class="img-produtos">
+            <figure>
+              <img src="./img/saltoAlto.jpg" alt="Salto Alto Vizzano">
+            </figure>
+          </div>
+          <div class="text-produtos">
+            <h3>Salto Alto Vizzano</h3>
+          </div>
+          <div class="preco-produtos">
+            <button type="button" class="button-buy" onclick="comprar()"><h3>R$ 99,<small>99</small></h3></button>
+          </div>
+        </div>
+      </article>
+
+      <article>
+        <div class="card">
+          <div class="img-produtos">
+            <figure>
+              <img src="./img/botasCanoAlto.jpg" alt="Botas Cano Alto">
+            </figure>
+          </div>
+          <div class="text-produtos">
+            <h3>Botas Cano Alto</h3>
+          </div>
+          <div class="preco-produtos">
+            <button type="button" class="button-buy" onclick="comprar()"><h3>R$ 299,<small>99</small></h3></button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="contato container" id="contato">
+    <h2>Contacte-nos</h2>
+
+    <div>
+      <form action ="#" method="POST" onsubmit="submitForm(this); return false;" autocomplete="on">
+        <table>
+          <tr>
+            <td>
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" onfocusout="formBack()" onkeypress="formMod()">
+          
+              <label for="sobrenome">Sobrenome:</label>
+              <input type="text" id="sobrenome" name="sobrenome" placeholder="Seu Sobrenome">
+          
+              <label for="email">Email:</label>
+              <input type="email" id="email" list="emails" name="email" placeholder="Seu Email" onkeydown="destaqueEmail()" autocomplete="off">
+
+              <datalist id="emails">
+                <option value="seuemail@hotmail.com">
+                <option value="seuemail@gmail.com">
+                <option value="seuemail@outlook.com">
+                <option value="seuemail@yahoo.com">
+              </datalist>
+        
+              <label for="mensagem">Mensagem:</label>
+              <textarea id="mensagem" name="mensagem" placeholder="Escreva aqui sua mensagem!" onkeyup="upText()"></textarea>
+          
+              <input type="submit" value="Submit">
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <div class=" grid icons">
+      <a target="_blank"> 
+        <i class="fab fa-twitter"></i>
+      </a>
+
+      <a target="_blank" > 
+        <i class="fab fa-linkedin"></i>
+      </a>
+
+      <a  target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© Criado por Ravier de Oliveira</p>
+  </footer>
+</body>
+</html>
